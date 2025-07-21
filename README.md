@@ -87,6 +87,6 @@ This project is open source and available under the [MIT License](LICENSE).
 For any inquiries or feedback, please contact:
 
 - Email: yashvinthanmoorthy@gmail.com
-- GitHub: [your-github-profile](https://github.com/yashvinthan/)
+- GitHub: [yashvinthan](https://github.com/yashvinthan/)
 
 ---
