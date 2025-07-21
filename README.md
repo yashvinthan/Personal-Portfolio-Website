@@ -1,10 +1,8 @@
-# -Personal-Portfolio-Website
+# Personal Portfolio Website
  Developed a personal portfolio website to showcase my  projects and skills using HTML, CSS, and JavaScript.  Designed a responsive and user-friendly interface.  Implemented a contact form with JavaScript validation
 <div align="center">
   <img alt="Demo" src="./Images/Untitled design (11).png" />
 </div>
-# Personal Portfolio Website
-
 This is a personal portfolio website showcasing projects, blog posts, resume, and about information. The website is built with React and features a modern, responsive design with smooth navigation and interactive elements.
 
 ## Features
