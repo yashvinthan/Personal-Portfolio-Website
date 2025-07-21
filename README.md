@@ -36,7 +36,7 @@ This is a personal portfolio website showcasing projects, blog posts, resume, an
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/yashvinthan/Personal-Portfolio-Website.git
    ```
 2. Navigate to the project directory:
    ```bash
