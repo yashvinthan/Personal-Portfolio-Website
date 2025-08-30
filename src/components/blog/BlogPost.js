@@ -68,6 +68,7 @@ function BlogPost() {
 
         {/* ✅ Blog Content */}
         <div
+        className="blog-content"
           style={{
             color: "white",
             lineHeight: "1.8",
