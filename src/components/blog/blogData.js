@@ -1,4 +1,9 @@
 // components/blogData.js
+import homeLabThumb from "../../Assets/Blogs/home-lab-thumbnail.png";
+
+import homeLabSetup from "../../Assets/Blogs/home-lab-setup.jpg";
+import homeLabSetup1 from "../../Assets/Blogs/home-lab-setup1.jpg";
+import proxmoxDashboard from "../../Assets/Blogs/proxmox-dashboard.png";
 const blogData = [
   {
     slug: "how-i-built-my-portfolio",
@@ -56,13 +61,14 @@ const blogData = [
       <li>Network switch + power strips for connectivity.</li>
       <li>Plenty of cables (yes, cable management is still on my TODO list 😅).</li>
     </ul>
-    <img src="/Assets/Blogs/home-lab-setup.jpg" alt="My Home Lab Setup" />
+    <img src="${homeLabSetup}" alt="My Home Lab Setup" />
+    <img src="${homeLabSetup1}" alt="My Home Lab Setup 2" />
 
     <h3>Virtualization with Proxmox</h3>
     <p>At the core of my home lab is <strong>Proxmox Virtual Environment</strong>. 
     It lets me manage virtual machines (VMs) and LXC containers across nodes in a cluster. 
     Here’s a look at my dashboard:</p>
-    <img src="/Assets/Blogs/proxmox-dashboard.png" alt="Proxmox Dashboard" />
+    <img src="${proxmoxDashboard}" alt="Proxmox Dashboard" />
 
     <p>Currently, my Proxmox cluster runs across four nodes: <em>fino</em>, <em>lex</em>, <em>luffy</em>, and <em>nuts</em>. 
     Together they host a variety of services:</p>
