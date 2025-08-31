@@ -2,37 +2,86 @@
 <html lang="en">
 
  <head>
-  <!-- Basic setup -->
+<head>
   <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <title>Yashvinthan | Computer Science & Engineering Student | Web Developer Portfolio</title>
-  
-  <!-- SEO -->
-  <meta name="description" content="Official portfolio website of Yashvinthan, a Computer Science & Engineering student from Tamil Nadu, India. Explore my web development projects, coding skills, and achievements. Passionate about software development, frontend, backend, and full stack technologies.">
-  <meta name="keywords" content="Yashvinthan, Yashvinthan portfolio, Yashvinthan website, computer science student, computer engineering, CSE student, B.Tech CSE, engineering student, software developer, web developer, frontend developer, backend developer, full stack developer, app developer, fresher portfolio, fresher resume, internships, job seeker, technology student, coding enthusiast, programming, software development, web development, HTML, CSS, JavaScript, React, Node.js, Express.js, MongoDB, Python, Django, Flask, Java, C, C++, PHP, SQL, MySQL, GitHub projects, open source contributor, IT student, software engineer, project showcase, portfolio projects, resume site, career site, personal website, Tamil Nadu, Chennai, India, student developer, young innovator, tech enthusiast, computer programmer, cloud computing, AI, artificial intelligence, machine learning, data science, developer portfolio site, tech portfolio, modern web design, responsive website">
-  <meta name="author" content="Yashvinthan">
-  
-  <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
-  <meta property="og:title" content="Yashvinthan | Portfolio Website">
-  <meta property="og:description" content="Explore the projects and skills of Yashvinthan, a Computer Science & Engineering student from Tamil Nadu. Passionate about coding, web development, and technology.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yashvinthan.theslowwman.space/">
-  <meta property="og:image" content="https://yashvinthan.theslowwman.space/preview.jpg">
-  <meta property="og:site_name" content="Yashvinthan Portfolio">
-  
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Yashvinthan | Portfolio Website">
-  <meta name="twitter:description" content="Discover Yashvinthan’s portfolio: web development projects, programming skills, and achievements as a CSE student.">
-  <meta name="twitter:image" content="https://yashvinthan.theslowwman.space/preview.jpg">
-  
-  <!-- Canonical -->
-  <link rel="canonical" href="https://yashvinthan.theslowwman.space/">
-</head>
 
+  <!-- Favicon / PWA -->
+  <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://yashvinthan.theslowwman.space/" />
+
+  <!-- Primary SEO -->
+  <title>Yashvinthan Moorthy | CS Student & Web Developer</title>
+  <meta name="description" content="Portfolio of Yashvinthan Moorthy, a Computer Science & Engineering student focused on web development, software projects, and homelab/AI-IoT experiments." />
+  <meta name="author" content="Yashvinthan Moorthy" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Yashvinthan Portfolio" />
+  <meta property="og:title" content="Yashvinthan Moorthy | CS Student & Web Developer" />
+  <meta property="og:description" content="Portfolio of Yashvinthan Moorthy, a Computer Science & Engineering student focused on web development, software projects, and homelab/AI-IoT experiments." />
+  <meta property="og:url" content="https://yashvinthan.theslowwman.space/" />
+  <!-- Make preview.jpg 1200×630 JPG, <300KB -->
+  <meta property="og:image" content="https://yashvinthan.theslowwman.space/preview.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Yashvinthan Moorthy | CS Student & Web Developer" />
+  <meta name="twitter:description" content="Web development, software projects, and homelab/AI-IoT experiments." />
+  <meta name="twitter:image" content="https://yashvinthan.theslowwman.space/preview.jpg" />
+  <meta name="twitter:image:alt" content="Screenshot of Yashvinthan’s portfolio homepage" />
+
+  <!-- JSON-LD: Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://yashvinthan.theslowwman.space/#person",
+    "name": "Yashvinthan Moorthy",
+    "url": "https://yashvinthan.theslowwman.space/",
+    "image": "https://yashvinthan.theslowwman.space/preview.jpg",
+    "jobTitle": "Computer Science & Engineering Student",
+    "description": "CSE student building software, MERN projects, AI/IoT, and homelab setups.",
+    "sameAs": [
+      "https://github.com/yashvinthan",
+      "https://www.linkedin.com/in/yashvinthan-moorthy-86a49a297",
+      "https://www.instagram.com/_yashvinthan_"
+    ],
+    "knowsAbout": [
+      "Web Development", "React", "Node.js", "JavaScript", "Python",
+      "SQL/MySQL", "Proxmox", "AI", "IoT"
+    ],
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Dr. M.G.R. Educational and Research Institute"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: WebSite + SearchAction (optional but nice) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://yashvinthan.theslowwman.space/",
+    "name": "Yashvinthan Portfolio",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://yashvinthan.theslowwman.space/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+</head>
 <body>
   <noscript>Who am I to judge when I myself walk the earth as an imperfect man</noscript>
   <div id="root"></div>
