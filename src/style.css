@@ -741,3 +741,121 @@ button:focus {
 .fork-btn-inner::after {
   display: none !important;
 }
+/* =========================================================
+   FINAL THEME — Black Mono + Particles + Transparent Navbar
+   ========================================================= */
+
+/* === GLOBAL BACKGROUND === */
+html, body, #root {
+  background-color: #0f0f0f !important;  /* soft black base */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* === PARTICLES ALWAYS BEHIND === */
+#tsparticles {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 0 !important;         /* stay at bottom */
+  pointer-events: none !important;
+  background: transparent !important;
+}
+
+/* === TRANSPARENT NAVBAR === */
+.navbar,
+.sticky,
+.navbar .container,
+.navbar .container-fluid,
+.navbar .navbar-collapse {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  backdrop-filter: blur(6px);    /* optional subtle blur for readability */
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 1000 !important;
+}
+
+/* remove leftover gradient strips */
+.navbar::before,
+.navbar::after,
+.sticky::before,
+.sticky::after {
+  content: none !important;
+  background: none !important;
+}
+
+/* make nav text always white */
+.navbar-brand,
+.navbar-nav .nav-link,
+.navbar-toggler span {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+.navbar-nav .nav-link:hover { color: #e5e5e5 !important; }
+
+/* === SECTIONS TRANSPARENT (show particles) === */
+.home-section,
+.home-about-section,
+.about-section,
+.project-section,
+.resume-section,
+.blog-section {
+  background: transparent !important;   /* was #0f0f0f */
+  background-image: none !important;
+  position: relative !important;
+  z-index: 1 !important;                /* above particles */
+}
+
+/* Footer can stay solid so it reads like a bar */
+.footer {
+  background: #0f0f0f !important;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* cards slightly lighter */
+.project-card-view,
+.blog-card-view {
+  background-color: #1a1a1a !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.35) !important;
+}
+
+/* === FOOTER FIX === */
+.footer {
+  margin-top: auto;
+  background: #0f0f0f !important;
+  z-index: 2;
+}
+/* === Sticky Footer Layout === */
+html, body, #root, .app-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+/* Make sure footer always stays at bottom */
+html, body {
+  height: 100%;              /* full height */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#root, .App {                /* if you're using React root */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;         /* full viewport height */
+}
+
+.footer {
+  margin-top: auto;          /* pushes footer down */
+  background-color: #0f0f0f !important;
+  text-align: center;
+  padding: 10px 0;
+}

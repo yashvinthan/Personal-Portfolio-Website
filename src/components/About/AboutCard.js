@@ -8,30 +8,38 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple">Yashvinthan </span>
-            from <span className="purple"> Tamil Nadu, India.</span>
+            Hi Everyone, I am <span className="purple">Yashvinthan</span>
+            {" "}from <span className="purple">Tamil Nadu, India.</span>
             <br />
-            I'm currently pursuing a B.Tech in Computer Science and Engineering at Dr. MGR Educational and Research Institute.
+            I’m currently pursuing a <b className="purple">B.Tech in Computer Science and Engineering</b> at 
+            <b className="purple"> Dr. MGR Educational and Research Institute</b>.
             <br />
-            Always looking for opportunities to learn, collaborate, and build impactful solutions.
+            I am passionate about <b className="purple">AI, IoT, App Development</b>, and exploring areas related to 
+            <b className="purple"> Blockchain</b>. I also love working on <b className="purple">home lab projects</b> with Proxmox, OPNsense, and Cloudflare.
             <br />
             <br />
-            Apart from coding, some other activities that I love to do!
+            Always looking for opportunities to <b className="purple">learn, collaborate, and build impactful solutions</b>.
+            <br />
+            <br />
+            Apart from coding and projects, some activities I enjoy:
           </p>
           <ul>
             <li className="about-activity">
-              <ImPointRight /> Playing Games
+              <ImPointRight /> Playing strategy & multiplayer games
             </li>
             <li className="about-activity">
-              <ImPointRight /> listening to music
+              <ImPointRight /> Listening to music & podcasts
             </li>
             <li className="about-activity">
-              <ImPointRight /> building diy projects
+              <ImPointRight /> Building DIY electronics / IoT projects
+            </li>
+            <li className="about-activity">
+              <ImPointRight /> Exploring tech communities & hackathons
             </li>
           </ul>
 
           <p style={{ color: "rgb(155 126 172)" }}>
-            "Building things that truly matter!"{" "}
+            "Keep building things that truly matter!"{" "}
           </p>
           <footer className="blockquote-footer">Yashvinthan</footer>
         </blockquote>

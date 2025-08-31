@@ -19,44 +19,26 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-             A passionate Computer Science and Engineering student at <b className="purple">Dr. MGR Educational and Research Institute.</b>.
-              <br />
-              <br />I have a solid foundation in programming with
-              <i>
-                <b className="purple"> C, C++, Python, and Java </b>
-              </i>
-              <br />
-              <br />
-              My field of Interest's are building new &nbsp;
-              <i>
-                <b className="purple">App Development and Products </b> and
-                also in areas related to{" "}
-                <b className="purple">
-                  Blockchain.
-                </b>
-              </i>
-              <br />
-              <br />
-              Whenever possible, I also apply my passion for developing products
-              with <b className="purple">python</b> and
-              <i>
-                <b className="purple">
-                  {" "}
-                  Contributing To Real-World Projects
-                </b>
-              </i>
-              &nbsp; like
-              <i>
-                <b className="purple"> Portfolio Website</b>
-              </i>
-              &nbsp; and
-              <i>
-                <b className="purple">
-                  {" "}
-                  Basic Library Management System
-                </b>
-              </i>
-            </p>
+  I am a passionate <b className="purple">Computer Science and Engineering</b> student at 
+  <b className="purple"> Dr. MGR Educational and Research Institute</b>.
+  <br /><br />
+  Skilled in programming with <b className="purple">C, C++, Python, Java, and JavaScript</b>, I also work extensively with
+  <b className="purple"> React.js, SQL/MySQL, Git, and Proxmox</b>.
+  <br /><br />
+  My interests include <i><b className="purple">App Development</b>, 
+  <b className="purple"> AI & IoT projects</b>, and exploring areas related to 
+  <b className="purple"> Blockchain</b>.</i>
+  <br /><br />
+  Some of my projects include:
+  <ul>
+    <li><b className="purple">AI-Powered Camera</b> using ESP32-CAM & GPT-4o for real-time image analysis.</li>
+    <li><b className="purple">Personal Portfolio Website</b> built with HTML, CSS, and JavaScript.</li>
+    <li><b className="purple">Home Lab Setup</b> with Proxmox, OPNsense firewall, and Cloudflare tunnels.</li>
+  </ul>
+  <br />
+  I actively participate in <b className="purple">coding competitions</b>, hackathons, and university clubs,
+  and was awarded <b className="purple">1st Place</b> in an Internal CTF by the Coding Club.
+</p>
           </Col>
           <Col md={4} className="myAvtar">
             <Tilt>
