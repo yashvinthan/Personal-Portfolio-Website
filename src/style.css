@@ -859,3 +859,44 @@ html, body {
   text-align: center;
   padding: 10px 0;
 }
+/* Preloader container */
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  background: #0f0f0f; /* soft black */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s ease;
+}
+
+#preloader-none {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+/* SVG icon scaling */
+.preloader-icon {
+  width: 80px;   /* adjust as needed */
+  height: 80px;
+  animation: spin 1.5s linear infinite; /* optional spin */
+}
+
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+@keyframes pulse {
+  0%, 80%, 100% {
+    transform: scale(0.7);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
