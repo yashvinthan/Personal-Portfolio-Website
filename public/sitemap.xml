@@ -1,34 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
-    <loc>https://yashvinthan.theslowwman.space/</loc>
+    <loc>https://yashvinthan.site/</loc>
     <lastmod>2025-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
-    <loc>https://yashvinthan.theslowwman.space/projects</loc>
+    <loc>https://yashvinthan.site/projects</loc>
     <lastmod>2025-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://yashvinthan.theslowwman.space/blog</loc>
+    <loc>https://yashvinthan.site/blog</loc>
     <lastmod>2025-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://yashvinthan.theslowwman.space/about</loc>
+    <loc>https://yashvinthan.site/about</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://yashvinthan.theslowwman.space/resume</loc>
+    <loc>https://yashvinthan.site/resume</loc>
     <lastmod>2025-07-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
-  <!-- Add more URLs as needed, e.g. individual blog posts -->
+
+  <url>
+    <loc>https://yashvinthan.site/contact</loc>
+    <lastmod>2025-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Add blog post URLs below -->
+  <url>
+    <loc>https://yashvinthan.site/blog/how-i-built-my-portfolio</loc>
+    <lastmod>2025-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://yashvinthan.site/blog/my-student-home-lab</loc>
+    <lastmod>2025-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>
