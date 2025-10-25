@@ -3,6 +3,7 @@
 // ✅ Imports for thumbnails and blog images
 import blog1Thumb from "../../Assets/Blogs/blog1-thumbnail.png";
 import blog2Thumb from "../../Assets/Blogs/blog2-thumbnail.png";
+import mcpN8nThumb from "../../Assets/Blogs/mcp-n8n-thumbnail.png";
 import homeLabThumb from "../../Assets/Blogs/home-lab-thumbnail.png";
 
 // Home Lab screenshots
@@ -15,6 +16,133 @@ import pfReadme from "../../Assets/Blogs/readme-img.png";
 import pfResponsive from "../../Assets/Blogs/Untitled design (11).png";
 
 const blogData = [
+  {
+    slug: "mcp-n8n-automation",
+    title: "Using n8n-MCP to Supercharge Claude + n8n",
+    description:
+      "Documented how I use the open-source n8n-MCP server with Claude Desktop to explore n8n’s node library safely with full docs, guardrails, and quick-start config.",
+    content: `
+      <p>I wanted my AI automations to be conversational without giving them unrestricted access to n8n. Instead of rolling my own integration, I deploy the excellent open-source <code>n8n-mcp</code> project by <a href="https://github.com/czlonkowski/n8n-mcp" target="_blank" rel="noopener noreferrer">czlonkowski</a>. It’s an MIT-licensed <strong>Model Context Protocol (MCP)</strong> server that equips Claude Desktop and other assistants with deep knowledge of the platform while enforcing strict guardrails.</p>
+
+      <h3>Overview</h3>
+      <p>The <code>n8n-mcp</code> package bridges the n8n workflow automation engine with AI tooling in minutes. The maintainer ships a prebuilt dataset with structured coverage of the platform so assistants can answer node questions and suggest automations confidently.</p>
+      <ul>
+        <li><strong>License:</strong> MIT with public GitHub repository.</li>
+        <li><strong>Node coverage:</strong> 536 nodes across <code>n8n-nodes-base</code> and <code>@n8n/n8n-nodes-langchain</code>.</li>
+        <li><strong>Node properties:</strong> 99% schema coverage with validation-ready metadata.</li>
+        <li><strong>Operations:</strong> 63.6% coverage of documented actions per node.</li>
+        <li><strong>Documentation:</strong> 90% ingestion of official n8n docs, including AI-focused nodes.</li>
+        <li><strong>AI tooling:</strong> 263 AI-capable nodes flagged with usage notes.</li>
+        <li><strong>Examples:</strong> 2,646 real configurations captured from popular templates.</li>
+        <li><strong>Template library:</strong> 2,500+ workflows indexed with smart filtering.</li>
+      </ul>
+
+      <h3>Safety First</h3>
+      <p><strong>Never</strong> ship AI-driven edits straight to production. I ship the server with hard warnings everywhere because AI output always needs validation.</p>
+      <ul>
+        <li>Duplicate a workflow before letting an assistant modify it.</li>
+        <li>Test changes inside a development workspace first.</li>
+        <li>Export backups of critical automations.</li>
+        <li>Validate and peer review changes before deployment.</li>
+      </ul>
+
+      <h3>Quick Start</h3>
+      <p>Spin up the server in about five minutes—no install required.</p>
+      <pre><code>npx n8n-mcp
+</code></pre>
+      <p>Claude Desktop picks it up through the MCP configuration file. I keep two presets ready to paste in:</p>
+      <h4>Documentation-only tools</h4>
+      <pre><code>{
+  "mcpServers": {
+    "n8n-mcp": {
+      "command": "npx",
+      "args": ["n8n-mcp"],
+      "env": {
+        "MCP_MODE": "stdio",
+        "LOG_LEVEL": "error",
+        "DISABLE_CONSOLE_OUTPUT": "true"
+      }
+    }
+  }
+}
+</code></pre>
+      <h4>Full management access</h4>
+      <pre><code>{
+  "mcpServers": {
+    "n8n-mcp": {
+      "command": "npx",
+      "args": ["n8n-mcp"],
+      "env": {
+        "MCP_MODE": "stdio",
+        "LOG_LEVEL": "error",
+        "DISABLE_CONSOLE_OUTPUT": "true",
+        "N8N_API_URL": "https://your-n8n-instance.com",
+        "N8N_API_KEY": "your-api-key"
+      }
+    }
+  }
+}
+</code></pre>
+      <p>Configuration file paths:</p>
+      <ul>
+        <li><strong>macOS:</strong> <code>~/Library/Application Support/Claude/claude_desktop_config.json</code></li>
+        <li><strong>Windows:</strong> <code>%APPDATA%\\Claude\\claude_desktop_config.json</code></li>
+        <li><strong>Linux:</strong> <code>~/.config/Claude/claude_desktop_config.json</code></li>
+      </ul>
+      <p>After updating the file, restart Claude Desktop and the tools appear instantly. A quickstart video walkthrough is on the roadmap.</p>
+
+      <h3>Architecture Overview</h3>
+      <img src="${mcpN8nThumb}" alt="High level diagram of MCP server broker in front of n8n" />
+      <ul>
+        <li>MCP <strong>dispatcher server</strong> exposes tools such as <code>trigger_workflow</code> and <code>list_workflows</code>.</li>
+        <li>A <strong>TypeScript broker</strong> signs JWTs, validates payloads, and hands the request to n8n via REST.</li>
+        <li>n8n workflows emit webhook callbacks that my MCP server converts into streaming events for the AI client.</li>
+      </ul>
+
+      <h3>Server Manifest (excerpt)</h3>
+      <pre><code>{
+  "name": "n8n-dispatcher",
+  "capabilities": [{
+    "name": "trigger_workflow",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "workflowId": { "type": "string" },
+        "input": { "type": "object" }
+      },
+      "required": ["workflowId"]
+    }
+  }]
+}</code></pre>
+
+      <h3>Workflow Template in n8n</h3>
+      <p>I keep workflows declarative: every automation starts with a <code>Webhook</code> node, processes the request through validation nodes, then fans out to tasks (Slack, Notion, Discord, internal APIs).</p>
+      <pre><code>{
+  "nodes": [
+    { "name": "Webhook", "type": "n8n-nodes-base.webhook" },
+    { "name": "Transform", "type": "n8n-nodes-base.function" },
+    { "name": "Notify", "type": "n8n-nodes-base.slack" }
+  ]
+}</code></pre>
+
+      <h3>Observability & Guardrails</h3>
+      <ul>
+        <li>Structured logs stream to Loki so I can correlate agent prompts with workflow runs.</li>
+        <li>Rate limits per assistant prevent accidental workflow storms.</li>
+        <li>Each run pushes a status card back to the chat UI with timing, outcome, and deep links to n8n.</li>
+      </ul>
+
+      <h3>What's Next</h3>
+      <ul>
+        <li>Add a secrets vault MCP server that rotates n8n credentials automatically.</li>
+        <li>Expose run history search so agents can reference previous automations.</li>
+        <li>Package the dispatcher as a Docker image for quick self-hosting.</li>
+      </ul>
+    `,
+    date: "October 28, 2025",
+    readTime: "8 min read",
+    imgPath: mcpN8nThumb,
+  },
   {
     slug: "how-i-built-my-portfolio",
     title: "How I Built My Portfolio",

@@ -4,10 +4,11 @@ import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 
 import Portfolio from "../../Assets/Projects/Personal-Portfolio-website-templates.png";
-import HomeLabThumb from "../../Assets/Blogs/home-lab-thumbnail.png"; // ← NEW
+import HomeLabThumb from "../../Assets/Blogs/home-lab-thumbnail.png"; // blog thumbnail
 import HappyBDayThumb from "../../Assets/Projects/happy-birthday-thumb.png";
 import AIVisionThumb from "../../Assets/Projects/ai-vision-assistant.png";
 import AutoTyperThumb from "../../Assets/Projects/AutoTyper.png";
+import MCPAutomationThumb from "../../Assets/Projects/chatify.png";
 function Projects() {
   return (
     <Container fluid className="project-section">
@@ -39,42 +40,51 @@ function Projects() {
               isBlog={true}
               title="Home Lab: Proxmox + OPNsense"
               description="Built a student home lab with a Proxmox cluster, OPNsense firewall, and self-hosted services (Nextcloud, Grafana, Vaultwarden) to learn virtualization, networking, and system admin."
-              ghLink="/blog/my-student-home-lab"   // internal route
+              ghLink="/blog/my-student-home-lab"
             />
           </Col>
 
           <Col md={4} className="project-card">
-  <ProjectCard
-    imgPath={HappyBDayThumb}
-    isBlog={false}
-    title="Happy Birthday Website"
-    description="Customizable birthday greeting with animations, music toggle, countdown, confetti, and a surprise video reveal."
-    ghLink="https://github.com/yashvinthan/happy-birthday-website"
-    demoLink="https://yashvinthan.github.io/happy-birthday-website/"   // ← add this
-  />
+            <ProjectCard
+              imgPath={HappyBDayThumb}
+              isBlog={false}
+              title="Happy Birthday Website"
+              description="Customizable birthday greeting with animations, music toggle, countdown, confetti, and a surprise video reveal."
+              ghLink="https://github.com/yashvinthan/happy-birthday-website"
+              demoLink="https://yashvinthan.github.io/happy-birthday-website/"
+            />
           </Col>
-    
-    <Col md={4} className="project-card">
-  <ProjectCard
-    imgPath={AIVisionThumb}
-    isBlog={false}
-    title="AI Vision Assistant (ESP32-CAM + OLED + GPT-4o)"
-    description="ESP32-CAM captures an image, sends it to a secure proxy for GPT-4o vision analysis, shows a concise result on an OLED, and beeps via buzzer for quick feedback."
-    ghLink="https://github.com/yashvinthan/ai-cam"
-    // demoLink="https://vision.your-domain.com" // if you host the proxy/ui
-  />
-</Col>
-<Col md={4} className="project-card">
-  <ProjectCard
-    imgPath={AutoTyperThumb}
-    isBlog={false}
-    title="StealthAutoTyper — Human-like Typing Bot"
-    description="Win32 SendInput auto-typer with human-like cadence, typo+backspace, CPU pacing, hotkeys, and no-repeats guard."
-    ghLink="https://github.com/yashvinthan/StealthAutoTyper"
-    // demoLink="" // (optional) a short screen-capture demo link
-  />
-</Col>
 
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={AIVisionThumb}
+              isBlog={false}
+              title="AI Vision Assistant (ESP32-CAM + OLED + GPT-4o)"
+              description="ESP32-CAM captures an image, sends it to a secure proxy for GPT-4o vision analysis, shows a concise result on an OLED, and beeps via buzzer for quick feedback."
+              ghLink="https://github.com/yashvinthan/ai-cam"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={MCPAutomationThumb}
+              isBlog={false}
+              title="Integrating n8n-MCP with Claude Desktop"
+              description="Configured the open-source n8n-mcp server so Claude can explore 500+ nodes, read docs, and trigger managed workflows with guardrails."
+              ghLink="https://github.com/czlonkowski/n8n-mcp"
+              demoLink="/blog/mcp-n8n-automation"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={AutoTyperThumb}
+              isBlog={false}
+              title="StealthAutoTyper - Human-like Typing Bot"
+              description="Win32 SendInput auto-typer with human-like cadence, typo+backspace, CPU pacing, hotkeys, and no-repeats guard."
+              ghLink="https://github.com/yashvinthan/StealthAutoTyper"
+            />
+          </Col>
         </Row>
       </Container>
     </Container>
