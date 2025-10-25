@@ -90,41 +90,6 @@ const blogData = [
         <li><strong>Linux:</strong> <code>~/.config/Claude/claude_desktop_config.json</code></li>
       </ul>
       <p>After updating the file, restart Claude Desktop and the tools appear instantly. A quickstart video walkthrough is on the roadmap.</p>
-
-      <h3>Architecture Overview</h3>
-      <img src="${mcpN8nThumb}" alt="High level diagram of MCP server broker in front of n8n" />
-      <ul>
-        <li>MCP <strong>dispatcher server</strong> exposes tools such as <code>trigger_workflow</code> and <code>list_workflows</code>.</li>
-        <li>A <strong>TypeScript broker</strong> signs JWTs, validates payloads, and hands the request to n8n via REST.</li>
-        <li>n8n workflows emit webhook callbacks that my MCP server converts into streaming events for the AI client.</li>
-      </ul>
-
-      <h3>Server Manifest (excerpt)</h3>
-      <pre><code>{
-  "name": "n8n-dispatcher",
-  "capabilities": [{
-    "name": "trigger_workflow",
-    "schema": {
-      "type": "object",
-      "properties": {
-        "workflowId": { "type": "string" },
-        "input": { "type": "object" }
-      },
-      "required": ["workflowId"]
-    }
-  }]
-}</code></pre>
-
-      <h3>Workflow Template in n8n</h3>
-      <p>I keep workflows declarative: every automation starts with a <code>Webhook</code> node, processes the request through validation nodes, then fans out to tasks (Slack, Notion, Discord, internal APIs).</p>
-      <pre><code>{
-  "nodes": [
-    { "name": "Webhook", "type": "n8n-nodes-base.webhook" },
-    { "name": "Transform", "type": "n8n-nodes-base.function" },
-    { "name": "Notify", "type": "n8n-nodes-base.slack" }
-  ]
-}</code></pre>
-
       <h3>Observability & Guardrails</h3>
       <ul>
         <li>Structured logs stream to Loki so I can correlate agent prompts with workflow runs.</li>
@@ -139,7 +104,7 @@ const blogData = [
         <li>Package the dispatcher as a Docker image for quick self-hosting.</li>
       </ul>
     `,
-    date: "October 28, 2025",
+    date: "October 04, 2025",
     readTime: "8 min read",
     imgPath: mcpN8nThumb,
   },

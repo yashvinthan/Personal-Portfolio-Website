@@ -29,7 +29,7 @@ function Projects() {
               isBlog={false}
               title="Personal Portfolio Website"
               description="Developed a personal portfolio website to showcase my projects and skills using HTML, CSS, and JavaScript. Designed a responsive and user-friendly interface. Implemented a contact form with JavaScript validation."
-              ghLink="https://github.com/yashvinthan/-Personal-Portfolio-Website"
+              ghLink="https://github.com/yashvinthan/Personal-Portfolio-Website"
             />
           </Col>
 
@@ -68,11 +68,10 @@ function Projects() {
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={MCPAutomationThumb}
-              isBlog={false}
+              isBlog={true}
               title="Integrating n8n-MCP with Claude Desktop"
               description="Configured the open-source n8n-mcp server so Claude can explore 500+ nodes, read docs, and trigger managed workflows with guardrails."
-              ghLink="https://github.com/czlonkowski/n8n-mcp"
-              demoLink="/blog/mcp-n8n-automation"
+              ghLink="/blog/mcp-n8n-automation"
             />
           </Col>
 
