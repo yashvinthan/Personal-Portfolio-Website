@@ -9,6 +9,7 @@ import HappyBDayThumb from "../../Assets/Projects/happy-birthday-thumb.png";
 import AIVisionThumb from "../../Assets/Projects/ai-vision-assistant.png";
 import AutoTyperThumb from "../../Assets/Projects/AutoTyper.png";
 import MCPAutomationThumb from "../../Assets/Projects/chatify.png";
+import ParkingSystemThumb from "../../Assets/Projects/online-parking-system.png";
 function Projects() {
   return (
     <Container fluid className="project-section">
@@ -72,6 +73,16 @@ function Projects() {
               title="Integrating n8n-MCP with Claude Desktop"
               description="Configured the open-source n8n-mcp server so Claude can explore 500+ nodes, read docs, and trigger managed workflows with guardrails."
               ghLink="/blog/mcp-n8n-automation"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={ParkingSystemThumb}
+              isBlog={false}
+              title="Online Parking System"
+              description="Full-stack parking management platform with admin KPIs, slot allocation, and digital bookings to reduce congestion for busy facilities."
+              ghLink="https://github.com/yashvinthan/online-parking-system"
             />
           </Col>
 
