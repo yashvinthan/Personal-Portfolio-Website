@@ -83,6 +83,7 @@ function Projects() {
               title="Online Parking System"
               description="Full-stack parking management platform with admin KPIs, slot allocation, and digital bookings to reduce congestion for busy facilities."
               ghLink="https://github.com/yashvinthan/online-parking-system"
+              demoLink="https://parking.webistzu.online/"
             />
           </Col>
 
