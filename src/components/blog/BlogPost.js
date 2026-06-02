@@ -12,6 +12,16 @@ function BlogPost() {
 
   const blog = blogData.find((b) => b.slug === slug);
 
+  React.useEffect(() => {
+    if (blog) {
+      document.title = `${blog.title} | Yashvinthan M Blog`;
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) {
+        metaDesc.setAttribute("content", blog.description);
+      }
+    }
+  }, [blog]);
+
   if (!blog) {
     return (
       <Container fluid className="project-section">

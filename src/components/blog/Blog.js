@@ -5,6 +5,14 @@ import BlogCards from "./BlogCards";
 import blogData from "./blogData";
 
 function Blog() {
+  React.useEffect(() => {
+    document.title = "Blog | Yashvinthan M - Systems Infrastructure & Security Guides";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute("content", "Explore deep-dive technical blueprint guides, systems administration blueprints, and security automation walkthroughs authored by Yashvinthan M.");
+    }
+  }, []);
+
   return (
     <Container fluid className="project-section">
       <Particle />

@@ -8,33 +8,30 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple">Yashvinthan</span>
+            Hi Everyone, I am <span className="purple">Yashvinthan M</span>
             {" "}from <span className="purple">Tamil Nadu, India.</span>
             <br />
-            I’m currently pursuing a <b className="purple">B.Tech in Computer Science and Engineering</b> at 
-            <b className="purple"> Dr. MGR Educational and Research Institute</b>.
+            I am currently pursuing a <b className="purple">B.Tech in Computer Science and Engineering</b> at <b className="purple">Dr. MGR Educational and Research Institute</b>.
             <br />
-            I am passionate about <b className="purple">AI, IoT, App Development</b>, and exploring areas related to 
-            <b className="purple"> Blockchain</b>. I also love working on <b className="purple">home lab projects</b> with Proxmox, OPNsense, and Cloudflare.
-            <br />
-            <br />
-            Always looking for opportunities to <b className="purple">learn, collaborate, and build impactful solutions</b>.
+            I am a dedicated technology enthusiast focused on <b className="purple">Cybersecurity, Network Engineering, Infrastructure Administration, and Enterprise Homelab Design</b>.
+            <br /><br />
+            My goal is to build a career bridging <b className="purple">Cybersecurity Operations, Infrastructure Engineering, Network Security, Software Engineering, DevOps, Web Development, and Application Engineering</b>—actively bringing these disciplines together through hands-on enterprise homelabbing, advanced software creation, and robust systems design.
             <br />
             <br />
-            Apart from coding and projects, some activities I enjoy:
+            Apart from engineering labs, some activities I enjoy:
           </p>
           <ul>
             <li className="about-activity">
-              <ImPointRight /> Playing strategy & multiplayer games
+              <ImPointRight /> Analyzing security architectures & threat intelligence reports
             </li>
             <li className="about-activity">
-              <ImPointRight /> Listening to music & podcasts
+              <ImPointRight /> Competing in Capture The Flag (CTF) events
             </li>
             <li className="about-activity">
-              <ImPointRight /> Building DIY electronics / IoT projects
+              <ImPointRight /> Listening to technology podcasts
             </li>
             <li className="about-activity">
-              <ImPointRight /> Exploring tech communities & hackathons
+              <ImPointRight /> Building DIY electronics & smart home integrations
             </li>
           </ul>
 

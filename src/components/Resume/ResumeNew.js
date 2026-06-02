@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
-import pdf from "../../Assets/../Assets/Yashvinthan_Moorthy_Resume(2025).pdf";
+import pdf from "../../Assets/yashvinthan Resume 2026.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
@@ -15,10 +15,21 @@ function ResumeNew() {
     setWidth(window.innerWidth);
   }, []);
 
+  useEffect(() => {
+    document.title = "Resume | Yashvinthan M - Professional CV";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute("content", "View and download the professional resume of Yashvinthan M, covering core engineering skills in Systems Infrastructure, Cybersecurity Operations, DevOps, and Web/App Development.");
+    }
+  }, []);
+
   return (
     <div>
       <Container fluid className="resume-section">
         <Particle />
+        <h1 className="project-heading" style={{ fontSize: "2.5em", paddingBottom: "30px", textAlign: "center" }}>
+          Professional <strong className="purple">Resume</strong>
+        </h1>
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"
