@@ -294,14 +294,44 @@ button:focus {
   color: #b562d6 !important;
 }
 
+.typewriter-container {
+  padding: 50px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+.home-description {
+  padding-left: 50px;
+  padding-right: 50px;
+  color: #fff;
+  opacity: 0.85;
+  font-size: 1.05em;
+  text-align: left;
+  line-height: 1.6;
+}
+
 @media (max-width: 767px) {
   .Typewriter__wrapper {
     font-size: 1.4em !important;
     font-weight: 500 !important;
-    position: absolute !important;
   }
   .Typewriter__cursor {
     display: none !important;
+  }
+  .heading {
+    padding-left: 15px !important;
+  }
+  .heading-name {
+    padding-left: 10px !important;
+  }
+  .typewriter-container {
+    padding: 15px !important;
+    padding-top: 20px !important;
+  }
+  .home-description {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
 }
 

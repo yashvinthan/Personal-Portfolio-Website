@@ -33,11 +33,11 @@ function Home() {
                 <strong className="main-name"> YASHVINTHAN M</strong>
               </h1>
 
-              <div style={{ padding: 50, paddingTop: 30, paddingBottom: 10, textAlign: "left" }}>
+              <div className="typewriter-container">
                 <Type />
               </div>
 
-              <p style={{ paddingLeft: 50, paddingRight: 50, color: "#fff", opacity: 0.85, fontSize: "1.05em", textAlign: "left", lineHeight: "1.6" }}>
+              <p className="home-description">
                 Passionate about designing secure, scalable, and enterprise-grade IT environments. Experienced in networking, virtualization, firewall administration, infrastructure management, and cybersecurity through extensive hands-on homelab projects.
               </p>
             </Col>
